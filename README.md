@@ -16,23 +16,11 @@
 <hr><ul>
 <li>Crea una app web react simple donde haya un header con 2 rutas. Cada ruta llevará a una screen diferente.</li>
 </ul><ul>
-<li>
-<ol>
 <li>En la primera screen/ruta: armar una tabla (puede ser con Bootstrap)</li>
-</ol>
-</li>
 </ul><ul>
-<li>
-<ol start="2">
 <li>Y en la otra screen/ruta armar un formulario de 2 o 3 campos (usando hooks para manipularlos datos/estado) donde al tocar el botón submit tome los datos ingresados y los ponga debajoo en un console.log.</li>
-</ol>
-</li>
 </ul><ul>
-<li>
-<ol start="3">
 <li>Subirlo a repositorio público GitHub y pasarnos el link para poder ver el código y ejecutar la app.</li>
-</ol>
-</li>
 </ul><h5>Steps</h5><ul>
 <li>Clonar repositorio en su terminal con git clone <code>https://github.com/JonathanMRuiz/mini-desafio.git</code></li>
 </ul><ul>
