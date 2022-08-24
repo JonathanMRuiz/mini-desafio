@@ -24,7 +24,11 @@ const FormPage = () => {
 
   return (
     <div className="bg-slate-500 h-screen flex justify-center items-center">
-      <Form onChangeText={handleText} onSubmit={handleSubmit} />
+      <Form
+        onChangeText={handleText}
+        onSubmit={handleSubmit}
+        formData={formData}
+      />
     </div>
   );
 };

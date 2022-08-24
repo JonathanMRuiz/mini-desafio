@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const Form = ({ onChangeText, onSubmit }) => {
+const Form = ({ formData, onChangeText, onSubmit }) => {
   const inputStyle =
     "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500";
 
@@ -77,8 +78,23 @@ const Form = ({ onChangeText, onSubmit }) => {
       <button type="submit" className={btnSubmit}>
         Submit
       </button>
+
+      <div>
+        <p>{formData.student}</p>
+      </div>
     </form>
   );
 };
 
 export default Form;
+
+Form.propTypes = {
+  formData: PropTypes.shape({
+    student: PropTypes.string,
+    age: PropTypes.number,
+    career: PropTypes.string,
+    hobbie: PropTypes.string,
+  }),
+  onChangeText: PropTypes.func,
+  onSubmit: PropTypes.func,
+};
