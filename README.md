@@ -1,6 +1,7 @@
 <h1>Mini-Desafio</h1>
 <hr><p>Demo Link: https://mini-desafio.vercel.app/</p><h2>Technologies Used</h2>
 <hr>
+<ul>
 <li>React</li>
 </ul><ul>
 <li>Tailwind CSS</li>
