@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Form = ({ formData, onChangeText, onSubmit }) => {
+  console.log(formData);
   const inputStyle =
     "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500";
 
@@ -23,23 +24,6 @@ const Form = ({ formData, onChangeText, onSubmit }) => {
           className={inputStyle}
           placeholder="Inserte estudiante"
           onChange={onChangeText}
-        />
-      </div>
-
-      <div className="mb-6">
-        <label
-          htmlFor="number"
-          className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-        >
-          Edad
-        </label>
-        <input
-          type="number"
-          name="age"
-          className={inputStyle}
-          placeholder="Inserte edad"
-          onChange={onChangeText}
-          min="0"
         />
       </div>
 
@@ -78,10 +62,6 @@ const Form = ({ formData, onChangeText, onSubmit }) => {
       <button type="submit" className={btnSubmit}>
         Submit
       </button>
-
-      <div>
-        <p>{formData.student}</p>
-      </div>
     </form>
   );
 };

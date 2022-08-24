@@ -4,7 +4,6 @@ import Form from "../components/Form";
 const FormPage = () => {
   const [formData, setFormData] = useState({
     student: "",
-    age: 0,
     career: "",
     hobbie: "",
   });
