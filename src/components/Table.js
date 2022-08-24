@@ -30,8 +30,8 @@ const Table = () => {
             </th>
           </tr>
         </thead>
-        {dataTable.map((item) => (
-          <tbody>
+        {dataTable.map((item, index) => (
+          <tbody key={index}>
             <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
               <th
                 scope="row"
