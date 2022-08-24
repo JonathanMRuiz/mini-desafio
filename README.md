@@ -2,7 +2,7 @@
 <hr><p>Demo Link: https://mini-desafio.vercel.app/</p><h2>Technologies Used</h2>
 <hr>
 <ul>
-<li>React</li>
+<li>React JS</li>
 </ul><ul>
 <li>Tailwind CSS</li>
 </ul><ul>
