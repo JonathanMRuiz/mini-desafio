@@ -5,7 +5,11 @@
 <li>React JS</li>
 </ul><ul>
 <li>Tailwind CSS</li>
-</ul><ul>
+</ul>
+<ul>
+<li>Context</li>
+</ul>
+<ul>
 <li>Vercel</li>
 </ul><ul>
 <li>React Testing Library</li>
