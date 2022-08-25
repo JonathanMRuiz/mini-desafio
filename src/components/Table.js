@@ -1,16 +1,6 @@
 import React from "react";
-const dataTable = [
-  { nombre: "Pedro", edad: 20, carrera: "Ingeniería", hobbie: "Futbol" },
-  {
-    nombre: "Rodrigo",
-    edad: 22,
-    carrera: "Arquitectura",
-    hobbie: "Bajo eléctrico",
-  },
-  { nombre: "Romina", edad: 21, carrera: "Abogacía", hobbie: "Acrobacia" },
-  { nombre: "Ana", edad: 23, carrera: "Contadora", hobbie: "Astronomía" },
-];
-const Table = () => {
+
+const Table = ({ dataTable }) => {
   return (
     <div className="overflow-x-auto relative">
       <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">

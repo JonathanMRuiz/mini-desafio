@@ -14,13 +14,19 @@ test("render content", () => {
 
 test("llenando campos del formulario", () => {
   render(<Form />);
-  const text = screen.getByLabelText(/text/i);
-  const password = screen.getByLabelText(/password/i);
+  const student = screen.getByPlaceholderText(/inserte estudiante/i);
+  const career = screen.getByPlaceholderText(/inserte carrera/i);
+  const hobbie = screen.getByPlaceholderText(/inserte hobbie/i);
   const btnSubmit = screen.getByRole("button", {
     name: /submit/i,
   });
 
-  userEvent.type(text, "Holaaaaa");
-  userEvent.type(password, "test123");
-  expect(btnSubmit).toBeEnabled();
+  userEvent.type(student, "Jonathan");
+  userEvent.type(career, "Frontend");
+  userEvent.type(hobbie, "LoL");
+  userEvent.click(btnSubmit);
+
+  expect(student).toBeInTheDocument();
+  expect(career).toBeInTheDocument();
+  expect(hobbie).toBeInTheDocument();
 });
