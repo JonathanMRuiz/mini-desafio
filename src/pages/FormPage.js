@@ -33,42 +33,41 @@ const FormPage = () => {
     "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800";
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="bg-slate-500 h-screen flex justify-center items-center"
-    >
-      <TextField
-        nameLabel="Estudiante"
-        name="nombre"
-        type="text"
-        placeholder="Ingrese nombre"
-        onChangeText={handleText}
-      />
-      <TextField
-        nameLabel="Edad"
-        name="edad"
-        type="number"
-        placeholder="Ingrese edad"
-        onChangeText={handleText}
-      />
-      <TextField
-        nameLabel="Carrera"
-        name="carrera"
-        type="text"
-        placeholder="Ingrese carrera"
-        onChangeText={handleText}
-      />
-      <TextField
-        nameLabel="Hobbie"
-        name="hobbie"
-        type="text"
-        placeholder="Ingrese hobbie"
-        onChangeText={handleText}
-      />
+    <form onSubmit={handleSubmit} className="bg-slate-500  ">
+      <div className="flex justify-center flex-col items-center h-screen">
+        <TextField
+          nameLabel="Estudiante"
+          name="nombre"
+          type="text"
+          placeholder="Ingrese nombre"
+          onChangeText={handleText}
+        />
+        <TextField
+          nameLabel="Edad"
+          name="edad"
+          type="number"
+          placeholder="Ingrese edad"
+          onChangeText={handleText}
+        />
+        <TextField
+          nameLabel="Carrera"
+          name="carrera"
+          type="text"
+          placeholder="Ingrese carrera"
+          onChangeText={handleText}
+        />
+        <TextField
+          nameLabel="Hobbie"
+          name="hobbie"
+          type="text"
+          placeholder="Ingrese hobbie"
+          onChangeText={handleText}
+        />
 
-      <button type="submit" className={btnSubmit}>
-        Submit
-      </button>
+        <button type="submit" className={btnSubmit}>
+          Submit
+        </button>
+      </div>
     </form>
   );
 };
