@@ -26,13 +26,12 @@ const TextField = ({ nameLabel, name, type, placeholder, onChangeText }) => {
   );
 };
 
-export default TextField;
-
 TextField.propTypes = {
-  nameLabel: PropTypes.string,
-  name: PropTypes.string,
-  type: PropTypes.string,
-  placeholder: PropTypes.string,
-  onChangeText: PropTypes.func,
-  onSubmit: PropTypes.func,
+  nameLabel: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  onChangeText: PropTypes.func.isRequired,
 };
+
+export default TextField;

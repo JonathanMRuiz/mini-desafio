@@ -35,6 +35,9 @@ const FormPage = () => {
   return (
     <form onSubmit={handleSubmit} className="bg-slate-500  ">
       <div className="flex justify-center flex-col items-center h-screen">
+        <div className="text-white text-1xl mb-5 border-b">
+          <h3 className="">Agregar estudiante a la tabla</h3>
+        </div>
         <TextField
           nameLabel="Estudiante"
           name="nombre"
