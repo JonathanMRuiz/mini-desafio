@@ -71,7 +71,6 @@ export default Form;
 Form.propTypes = {
   formData: PropTypes.shape({
     student: PropTypes.string,
-    age: PropTypes.number,
     career: PropTypes.string,
     hobbie: PropTypes.string,
   }),
