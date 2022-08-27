@@ -6,12 +6,9 @@ import { render, screen } from "@testing-library/react";
 
 import App from "../App";
 import userEvent from "@testing-library/user-event";
-import { MemoryRouter } from "react-router-dom";
-//1.wrapear form con provider
+import { MemoryRouter, createMemoryHistory } from "react-router-dom";
 
-//2.Renderizar app en vez de solo form
-
-test("render app", () => {
+test("integral test App", async () => {
   render(
     <MemoryRouter>
       <App />
@@ -22,23 +19,57 @@ test("render app", () => {
     name: /challenge de jonathan ruiz/i,
   });
 
+  expect(titleHome).toBeInTheDocument();
+
+  const routeTable = screen.getByRole("link", { name: /tabla/i });
+
+  userEvent.click(routeTable);
+
+  const tableRows = screen.getAllByRole("row");
+
+  expect(tableRows).toHaveLength(4);
+
   const routeForm = screen.getByRole("link", {
     name: /formulario/i,
   });
 
-  expect(titleHome).toBeInTheDocument();
-});
+  userEvent.click(routeForm);
 
-//render(<FormPage />);
-// const student = screen.getByPlaceholderText(/inserte estudiante/i);
-// const age = screen.getByPlaceholderText(/ingrese edad/i);
-// const career = screen.getByPlaceholderText(/inserte carrera/i);
-// const hobbie = screen.getByPlaceholderText(/inserte hobbie/i);
-// const btnSubmit = screen.getByRole("button", {
-//   name: /submit/i,
-// });
-// userEvent.type(student, "Jonathan");
-// userEvent.type(age, 20);
-// userEvent.type(career, "Frontend");
-// userEvent.type(hobbie, "LoL");
-// userEvent.click(btnSubmit);
+  const studentField = screen.getByRole("textbox", {
+    name: /estudiante/i,
+  });
+
+  userEvent.type(studentField, "Jonathan");
+
+  expect(studentField).toHaveValue("Jonathan");
+
+  // const ageField = screen.getByRole("spinbutton", {
+  //   name: /edad/i,
+  // });
+
+  // userEvent.type(ageField, "26");
+
+  // expect(ageField.value).toBe("26");
+
+  const careerField = screen.getByRole("textbox", {
+    name: /carrera/i,
+  });
+  userEvent.type(careerField, "Frontend");
+
+  expect(careerField).toHaveValue("Frontend");
+
+  const hobbieField = screen.getByRole("textbox", {
+    name: /hobbie/i,
+  });
+  userEvent.type(hobbieField, "LoL");
+
+  expect(hobbieField).toHaveValue("LoL");
+
+  const submit = screen.getByRole("button", {
+    name: /submit/i,
+  });
+
+  userEvent.click(submit);
+
+  expect(tableRows).toHaveLength(5);
+});

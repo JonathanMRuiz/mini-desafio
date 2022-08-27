@@ -39,28 +39,28 @@ const FormPage = () => {
           <h3 className="">Agregar estudiante a la tabla</h3>
         </div>
         <TextField
-          nameLabel="Estudiante"
+          label="Estudiante"
           name="nombre"
           type="text"
           placeholder="Ingrese nombre"
           onChangeText={handleText}
         />
         <TextField
-          nameLabel="Edad"
+          label="Edad"
           name="edad"
           type="number"
           placeholder="Ingrese edad"
           onChangeText={handleText}
         />
         <TextField
-          nameLabel="Carrera"
+          label="Carrera"
           name="carrera"
           type="text"
           placeholder="Ingrese carrera"
           onChangeText={handleText}
         />
         <TextField
-          nameLabel="Hobbie"
+          label="Hobbie"
           name="hobbie"
           type="text"
           placeholder="Ingrese hobbie"
